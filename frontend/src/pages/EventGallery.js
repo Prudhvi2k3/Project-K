@@ -3,7 +3,7 @@ import axios from 'axios';
 import './EventGallery.css';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://project-k-s2nr.onrender.com/',
 });
 
 const arrayBufferToBase64 = (buffer) => {

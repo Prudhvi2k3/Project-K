@@ -17,7 +17,7 @@ function Hackathon() {
 
   const fetchHackathons = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/hackathon');
+      const response = await axios.get('https://project-k-s2nr.onrender.com/hackathon');
       const sortedHackathons = response.data.sort((a, b) => b._id.localeCompare(a._id));
       setHackathons(sortedHackathons);
     } catch (error) {

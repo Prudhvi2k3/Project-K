@@ -15,7 +15,7 @@ function ForgotPassword() {
 
     const handleSubmit = async (values) => {
         try {
-            const response = await axios.post('http://localhost:5000/forgotpassword', { email: values.email });
+            const response = await axios.post('https://project-k-s2nr.onrender.com/forgotpassword', { email: values.email });
             message.success(response.data.message); // Show success message
             navigate('/admin/login');
         } catch (error) {

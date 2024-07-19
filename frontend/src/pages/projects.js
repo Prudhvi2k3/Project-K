@@ -17,7 +17,7 @@ function Project() {
 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/project');
+      const response = await axios.get('https://project-k-s2nr.onrender.com/project');
       const sortedProjects = response.data.sort((a, b) => b._id.localeCompare(a._id));
       setProjects(sortedProjects);
     } catch (error) {

@@ -11,7 +11,7 @@ const { Meta } = Card;
 
 // Create an axios instance with a base URL
 const api = axios.create({
-  baseURL: 'http://localhost:5000', // Adjust this to match your backend URL
+  baseURL: 'https://project-k-s2nr.onrender.com', // Adjust this to match your backend URL
 });
 
 // Function to convert ArrayBuffer to Base64 string

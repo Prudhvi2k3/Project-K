@@ -31,7 +31,7 @@ const FocusAreasManager = () => {
 
     const fetchFocusAreas = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/focusarea');
+            const response = await axios.get('https://project-k-s2nr.onrender.com/focusarea');
             const sortedFocusAreas = response.data.sort((a, b) => b._id.localeCompare(a._id));
             setFocusAreas(sortedFocusAreas);
   } catch (error) {
@@ -61,12 +61,12 @@ const FocusAreasManager = () => {
 
         try {
             if (isEditing) {
-                await axios.put(`http://localhost:5000/focusarea/${editingId}`, formData, {
+                await axios.put(`https://project-k-s2nr.onrender.com/focusarea/${editingId}`, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 message.success('Focus area updated successfully');
             } else {
-                await axios.post('http://localhost:5000/focusarea', formData, {
+                await axios.post('https://project-k-s2nr.onrender.com/focusarea', formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 message.success('Focus area added successfully');
@@ -90,7 +90,7 @@ const FocusAreasManager = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/focusarea/${id}`);
+            await axios.delete(`https://project-k-s2nr.onrender.com/focusarea/${id}`);
             setFocusAreas(focusAreas.filter(area => area._id !== id));
             message.success('Focus area deleted successfully');
         } catch (error) {

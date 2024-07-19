@@ -19,7 +19,7 @@ const Focus = () => {
     // Fetch images from the backend
     const fetchImages = async () => {
       try {
-        const response = await fetch('http://localhost:5000/focusarea');
+        const response = await fetch('https://project-k-s2nr.onrender.com/focusarea');
         const data = await response.json();
         // Convert ArrayBuffer to base64 for each image
         const processedImages = data.sort((a, b) => b._id.localeCompare(a._id)).map(image => ({

@@ -28,7 +28,7 @@ const Home = () => {
   useEffect(() => {
     const fetchAchievements = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/achievement');
+        const response = await axios.get('https://project-k-s2nr.onrender.com/achievement');
         const fetchedAchievements = response.data;
 
         const achievementsWithImages = fetchedAchievements.map(achievement => ({

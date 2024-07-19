@@ -17,7 +17,7 @@ const AlumniPage = () => {
 
   useEffect(() => {
     // Fetch alumni data from the backend
-    fetch('http://localhost:5000/alumni')
+    fetch('https://project-k-s2nr.onrender.com/alumni')
       .then((response) => response.json())
       .then((data) => setAlumniData(data))
       .catch((error) => console.error('Error fetching alumni data:', error));

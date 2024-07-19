@@ -25,7 +25,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/contact/send', formData);
+      const response = await axios.post('https://project-k-s2nr.onrender.com/contact/send', formData);
       console.log(response.data);
       toast.success('Message sent successfully!', {
         position: "top-right",

@@ -35,7 +35,7 @@ const AlumniManager = () => {
 
     const fetchAlumni = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/alumni');
+            const response = await axios.get('https://project-k-s2nr.onrender.com/alumni');
             setAlumni(response.data);
         } catch (error) {
             console.error('Error fetching alumni:', error);
@@ -61,9 +61,9 @@ const AlumniManager = () => {
 
         try {
             if (editMode) {
-                await axios.put(`http://localhost:5000/alumni/${editId}`, formData);
+                await axios.put(`https://project-k-s2nr.onrender.com/alumni/${editId}`, formData);
             } else {
-                await axios.post('http://localhost:5000/alumni', formData);
+                await axios.post('https://project-k-s2nr.onrender.com/alumni', formData);
             }
             setEditMode(false);
             setEditId('');
@@ -91,7 +91,7 @@ const AlumniManager = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/alumni/${id}`);
+            await axios.delete(`https://project-k-s2nr.onrender.com/alumni/${id}`);
             fetchAlumni();
         } catch (error) {
             console.error('Error deleting alumni:', error);

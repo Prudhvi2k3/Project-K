@@ -22,7 +22,7 @@ const Login = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/login', { email, password });
+      const response = await axios.post('https://project-k-s2nr.onrender.com/login', { email, password });
 
       if (response.data.userId) {
         setUserId(response.data.userId);
@@ -41,7 +41,7 @@ const Login = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/verify-otp', { userId, otp });
+      const response = await axios.post('https://project-k-s2nr.onrender.com/verify-otp', { userId, otp });
 
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
@@ -61,7 +61,7 @@ const Login = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/resend-otp', { userId });
+      const response = await axios.post('https://project-k-s2nr.onrender.com/resend-otp', { userId });
       if (response.data.message) {
         message.success(response.data.message);
       }

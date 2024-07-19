@@ -12,7 +12,7 @@ const TeamMembers = () => {
 
   const fetchTeamMembers = useCallback(async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/teams/${batchName}/team/${teamNumber}`);
+      const response = await axios.get(`https://project-k-s2nr.onrender.com/teams/${batchName}/team/${teamNumber}`);
       setTeamMembers(response.data);
     } catch (error) {
       console.error('Error fetching team data:', error);

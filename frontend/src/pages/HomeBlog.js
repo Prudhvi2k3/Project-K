@@ -45,7 +45,7 @@ function HomeBlog() {
 
   const fetchBlogs = useCallback(async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/blogs/${blogType}`);
+      const response = await axios.get(`https://project-k-s2nr.onrender.com/blogs/${blogType}`);
       setBlogs(response.data);
     } catch (error) {
       console.error('Error fetching blogs:', error);

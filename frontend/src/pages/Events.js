@@ -21,7 +21,7 @@ const EventCard = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/event');
+        const response = await axios.get('https://project-k-s2nr.onrender.com/event');
         const fetchedEvents = response.data;
 
         const sortedEvents = fetchedEvents.sort((a, b) => new Date(b.eventDate) - new Date(a.eventDate)).slice(0, 3);

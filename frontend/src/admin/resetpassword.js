@@ -16,7 +16,7 @@ function ResetPassword() {
 
     const handleSubmit = async (values) => {
       try {
-        const response = await axios.post(`http://localhost:5000/reset-password/${id}/${token}`, { password: values.password });
+        const response = await axios.post(`https://project-k-s2nr.onrender.com/reset-password/${id}/${token}`, { password: values.password });
         message.success(response.data.message); // Show success message
         navigate('/admin/login');
       } catch (error) {

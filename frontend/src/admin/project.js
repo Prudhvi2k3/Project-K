@@ -21,7 +21,7 @@ const ProjectPage = () => {
 
     const fetchProjects = async () => {
         try {
-          const response = await axios.get('http://localhost:5000/project');
+          const response = await axios.get('https://project-k-s2nr.onrender.com/project');
           const sortedProjects = response.data.sort((a, b) => b._id.localeCompare(a._id));
           setProjects(sortedProjects);
         } catch (error) {
@@ -62,12 +62,12 @@ const ProjectPage = () => {
 
         try {
             if (isEditing) {
-                await axios.put(`http://localhost:5000/project/${editingId}`, formData, {
+                await axios.put(`https://project-k-s2nr.onrender.com/project/${editingId}`, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 message.success('Project updated successfully');
             } else {
-                await axios.post('http://localhost:5000/project', formData, {
+                await axios.post('https://project-k-s2nr.onrender.com/project', formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 message.success('Project added successfully');
@@ -94,7 +94,7 @@ const ProjectPage = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/project/${id}`);
+            await axios.delete(`https://project-k-s2nr.onrender.com/project/${id}`);
             setProjects(projects.filter(project => project._id !== id));
             message.success('Project deleted successfully');
         } catch (error) {

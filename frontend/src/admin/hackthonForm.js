@@ -21,7 +21,7 @@ const HackathonPage = () => {
 
     const fetchHackathons = async () => {
         try {
-          const response = await axios.get('http://localhost:5000/hackathon');
+          const response = await axios.get('https://project-k-s2nr.onrender.com/hackathon');
           const sortedHackathons = response.data.sort((a, b) => b._id.localeCompare(a._id));
           setHackathons(sortedHackathons);
         } catch (error) {
@@ -57,12 +57,12 @@ const HackathonPage = () => {
     
         try {
             if (isEditing) {
-                await axios.put(`http://localhost:5000/hackathon/${editingId}`, formData, {
+                await axios.put(`https://project-k-s2nr.onrender.com/hackathon/${editingId}`, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 message.success('Hackathon updated successfully');
             } else {
-                await axios.post('http://localhost:5000/hackathon', formData, {
+                await axios.post('https://project-k-s2nr.onrender.com/hackathon', formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 message.success('Hackathon added successfully');
@@ -88,7 +88,7 @@ const HackathonPage = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/hackathon/${id}`);
+            await axios.delete(`https://project-k-s2nr.onrender.com/hackathon/${id}`);
             setHackathons(hackathons.filter(hackathon => hackathon._id !== id));
             message.success('Hackathon deleted successfully');
         } catch (error) {

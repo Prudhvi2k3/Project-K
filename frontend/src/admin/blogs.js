@@ -52,7 +52,7 @@ const Blogs = () => {
   const fetchBlogs = useCallback(async () => {
     if (!blogType) return;
     try {
-      const response = await axios.get(`http://localhost:5000/blogs/${blogType}`);
+      const response = await axios.get(`https://project-k-s2nr.onrender.com/blogs/${blogType}`);
       setBlogs(response.data);
     } catch (error) {
       console.error('Error fetching blogs:', error);
@@ -65,7 +65,7 @@ const Blogs = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/blogs/${blogType}/${id}`);
+      await axios.delete(`https://project-k-s2nr.onrender.com/blogs/${blogType}/${id}`);
       setBlogs(blogs.filter((blog) => blog._id !== id));
     } catch (error) {
       console.error('Error deleting blog:', error);
@@ -97,7 +97,7 @@ const Blogs = () => {
         }
       }
 
-      await axios.put(`http://localhost:5000/blogs/${blogType}/${selectedBlog._id}`, formData, {
+      await axios.put(`https://project-k-s2nr.onrender.com/blogs/${blogType}/${selectedBlog._id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -125,7 +125,7 @@ const Blogs = () => {
         }
       }
 
-      await axios.post(`http://localhost:5000/blogs/${blogType}`, formData, {
+      await axios.post(`https://project-k-s2nr.onrender.com/blogs/${blogType}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

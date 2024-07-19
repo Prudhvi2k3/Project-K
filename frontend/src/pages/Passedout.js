@@ -35,7 +35,7 @@ const BatchTeam = () => {
     useEffect(() => {
         const fetchBatches = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/teams/batches');
+                const response = await axios.get('https://project-k-s2nr.onrender.com/teams/batches');
                 // Sort batches in descending order based on batch name
                 const sortedBatches = response.data.sort((a, b) => {
                     // Assuming batch names are like "Batch-YYYY"
@@ -55,7 +55,7 @@ const BatchTeam = () => {
 
     const fetchTeams = useCallback(async (batchName) => {
         try {
-            const response = await axios.get(`http://localhost:5000/teams/${batchName}`);
+            const response = await axios.get(`https://project-k-s2nr.onrender.com/teams/${batchName}`);
             setTeams(response.data);
         } catch (error) {
             console.error('Error fetching team data:', error);

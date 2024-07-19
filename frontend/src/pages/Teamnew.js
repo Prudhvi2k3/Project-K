@@ -15,7 +15,7 @@ const BatchTeam = () => {
 
     const fetchLatestBatch = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/teams/latest-batch');
+            const response = await axios.get('https://project-k-s2nr.onrender.com/teams/latest-batch');
             const { latestBatch } = response.data;
 
             if (latestBatch) {
@@ -31,7 +31,7 @@ const BatchTeam = () => {
 
     const fetchTeams = useCallback(async (batchName) => {
         try {
-            const response = await axios.get(`http://localhost:5000/teams/${batchName}`);
+            const response = await axios.get(`https://project-k-s2nr.onrender.com/teams/${batchName}`);
             setTeams(response.data);
         } catch (error) {
             console.error('Error fetching team data:', error);

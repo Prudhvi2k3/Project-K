@@ -31,7 +31,7 @@ const AchievementsManager = () => {
 
     const fetchAchievements = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/achievement');
+            const response = await axios.get('https://project-k-s2nr.onrender.com/achievement');
             setAchievements(response.data);
         } catch (error) {
             console.error('Error fetching achievements:', error);
@@ -62,8 +62,8 @@ const AchievementsManager = () => {
             }
     
             if (isEditing) {
-                console.log(`PUT Request URL: http://localhost:5000/achievement/${editingId}`);
-                const response = await axios.put(`http://localhost:5000/achievement/${editingId}`, formData, {
+                console.log(`PUT Request URL: https://project-k-s2nr.onrender.com/achievement/${editingId}`);
+                const response = await axios.put(`https://project-k-s2nr.onrender.com/achievement/${editingId}`, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 const updatedAchievement = response.data;
@@ -74,8 +74,8 @@ const AchievementsManager = () => {
                 );
                 message.success('Achievement updated successfully');
             } else {
-                console.log('POST Request URL: http://localhost:5000/achievement');
-                await axios.post('http://localhost:5000/achievement', formData, {
+                console.log('POST Request URL: https://project-k-s2nr.onrender.com/achievement');
+                await axios.post('https://project-k-s2nr.onrender.com/achievement', formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 message.success('Achievement added successfully');
@@ -100,8 +100,8 @@ const AchievementsManager = () => {
 
     const handleDelete = async (id) => {
         try {
-            console.log(`DELETE Request URL: http://localhost:5000/achievement/${id}`);
-            await axios.delete(`http://localhost:5000/achievement/${id}`);
+            console.log(`DELETE Request URL: https://project-k-s2nr.onrender.com/achievement/${id}`);
+            await axios.delete(`https://project-k-s2nr.onrender.com/achievement/${id}`);
             setAchievements(achievements.filter(ach => ach._id !== id));
             message.success('Achievement deleted successfully');
         } catch (error) {
