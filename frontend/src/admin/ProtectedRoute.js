@@ -16,7 +16,7 @@ const ProtectedRoute = () => {
 
       try {
         // Verify token with the server
-        const response = await axios.get('http://localhost:5000/verify-token', {
+        const response = await axios.get('https://project-k-s2nr.onrender.com/verify-token', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setIsAuthenticated(true);
