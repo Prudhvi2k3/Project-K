@@ -1,0 +1,124 @@
+/* cards.css */
+.card-container {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center; /* Center text in cards */
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+  height: 50%;
+}
+
+.card-title {
+  margin: 0.5rem 5%;
+  font-size: 1.2rem;
+}
+
+.card-description {
+  margin: 0.5rem 5%;
+  font-size: 0.9rem;
+}
+
+.card-btn {
+  text-align: center;
+  width: 90%;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #20265C;
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem auto 1rem;
+  display: block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #273FF1;
+  transform: scale(1.05);
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  text-align: center; /* Center text in popup */
+  color: #333; /* Default text color */
+}
+
+.popup-content h2 {
+  color: #1a365d; /* Darker blue for title */
+}
+
+.popup-oneline-description,
+.popup-full-description {
+  color: #4a5568; /* Grey for descriptions */
+  margin-bottom: 1rem;
+}
+
+.close-btn {
+  background-color: #273FF1;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.close-btn:hover{
+  background-color: #20265C;
+  transform: scale(1.05);
+}
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.github-link svg {
+  margin-right: 0.5rem;
+}
+
+.popup-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.popup-img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+}

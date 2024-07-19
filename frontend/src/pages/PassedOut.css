@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.batch-team-container-unique {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.batch-box-unique {
+    font-family: 'Karla', sans-serif;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #F4F5FA;
+    padding: 20px;
+}
+
+.batch-box-unique .container-unique {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.batch-box-unique .card-unique {
+    width: 250px;
+    height: 350px;
+    border-radius: 2rem;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+.batch-box-unique .card-unique > .row-unique {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.batch-box-unique .card-unique .description-unique {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.batch-box-unique .title-unique {
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+
+.batch-box-unique .view-teams-unique {
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    background: rgba(51, 62, 255, 0.3);
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label.batch-card-unique {
+    width: 300px;
+    height: 400px;
+}
+
+/* Team Box Styles */
+.team-box-unique {
+    font-family: 'Poppins', sans-serif;
+    background: #F4F5FA;
+    padding: 40px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-box-unique .heading {
+    text-align: center;
+    padding-bottom: 30px;
+    color: #333;
+    font-size: 36px;
+    grid-column: 1 / -1;
+}
+
+.team-box-unique .team-card-unique {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-box-unique .team-card-unique .team-title-unique {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.team-box-unique .team-card-unique p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.team-box-unique .team-card-unique .view-details-unique {
+    margin-top: 20px;
+    display: inline-block;
+    background: #092c3e;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.team-box-unique .team-card-unique:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.team-box-unique .team-card-unique .view-details-unique:hover {
+    background: #0a3d56;
+}
+
+.team-box-unique .team-img-unique {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    background-color: #f8f8f8;
+    margin-bottom: 15px;
+}
+
+.team-box-unique .team-img-unique .team-image-unique {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.team-box-unique .team-card-unique:hover .team-img-unique .team-image-unique {
+    transform: scale(1.1);
+}
+
+.batch-box-unique .batch-card-unique[for="c1"] {
+    background-image: url('../img/Event1.jpg');
+}
+
+.batch-box-unique .batch-card-unique[for="c3"] {
+    background-image: url('../img/Event2.jpg');
+}
+
+.batch-box-unique .batch-card-unique[for="c2"] {
+    background-image: url('../img/Event3.jpeg');
+}
+
+.batch-box-unique .batch-card-unique[for="c4"] {
+    background-image: url('../img/Event4.jpg');
+}
+
+/* Selected batch container */
+.selected-batch-container-unique {
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+}
+
+.selected-batch-title-unique {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+    .batch-box-unique .card-unique {
+        width: 220px;
+        height: 300px;
+    }
+
+    input[type="radio"]:checked + label.batch-card-unique {
+        width: 260px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 992px) {
+    .batch-box-unique .card-unique {
+        width: 200px;
+        height: 280px;
+    }
+
+    input[type="radio"]:checked + label.batch-card-unique {
+        width: 240px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .batch-box-unique .card-unique {
+        width: 180px;
+        height: 250px;
+    }
+
+    input[type="radio"]:checked + label.batch-card-unique {
+        width: 220px;
+        height: 300px;
+    }
+
+    .team-box-unique {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .batch-box-unique .container-unique {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .batch-box-unique .card-unique {
+        width: 80%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    input[type="radio"]:checked + label.batch-card-unique {
+        width: 85%;
+        height: 250px;
+    }
+
+    .team-box-unique {
+        grid-template-columns: 1fr;
+    }
+
+    .selected-batch-title-unique {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .batch-box-unique .card-unique {
+        width: 90%;
+        height: 180px;
+    }
+
+    input[type="radio"]:checked + label.batch-card-unique {
+        width: 95%;
+        height: 220px;
+    }
+}

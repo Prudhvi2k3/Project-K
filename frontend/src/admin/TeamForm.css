@@ -1,0 +1,78 @@
+/* src/components/TeamForm.css */
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form select,
+form input[type="text"],
+form input[type="url"],
+form input[type="file"],
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input[type="file"] {
+  padding: 5px;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form button:active {
+  background-color: #004494;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form button:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form select:focus,
+form input[type="text"]:focus,
+form input[type="url"]:focus,
+form input[type="file"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form select,
+form input[type="text"],
+form input[type="url"],
+form input[type="file"] {
+  font-size: 16px;
+}
+
+form button {
+  font-size: 18px;
+}
+
+form select::placeholder,
+form input[type="text"]::placeholder,
+form input[type="url"]::placeholder,
+form input[type="file"]::placeholder {
+  color: #888;
+}

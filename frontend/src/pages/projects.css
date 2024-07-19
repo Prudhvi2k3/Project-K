@@ -1,0 +1,121 @@
+/* projects.css */
+.project-section {
+  padding: 40px 20px;
+}
+
+.project-section-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #20265C;
+}
+
+.project-carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.project-carousel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.project-carousel-item {
+  width: 100%;
+  aspect-ratio: 1 / 1.2;
+  display: flex;
+}
+
+.project-arrow {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 20%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.project-arrow:hover {
+  background: #20265C;
+}
+
+.project-arrow-left {
+  left: 10px;
+}
+
+.project-arrow-right {
+  right: 10px;
+}
+
+@media (max-width: 1200px) {
+  .project-carousel {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .project-carousel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-section {
+    padding: 30px 15px;
+  }
+
+  .project-section-heading {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+  }
+
+  .project-carousel-container {
+    padding: 0 40px;
+  }
+
+  .project-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .project-arrow {
+    padding: 10px;
+    font-size: 1.25rem;
+  }
+
+  .project-arrow-left {
+    left: 5px;
+  }
+
+  .project-arrow-right {
+    right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-section {
+    padding: 20px 10px;
+  }
+
+  .project-section-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .project-carousel-container {
+    padding: 0 30px;
+  }
+
+  .project-arrow {
+    padding: 8px;
+    font-size: 1rem;
+  }
+}

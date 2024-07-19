@@ -1,0 +1,78 @@
+/* Common styles */
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Batch Team Styles */
+.batch-team-container {
+   font-family: 'Karla', sans-serif;
+   background: #F4F5FA;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.team-box-unique {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.card-unique {
+   background: #FFF;
+   width: 250px;
+   margin: 20px;
+   box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+   box-sizing: border-box;
+   padding: 20px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.img-unique {
+   height: 200px;
+   width: 100%;
+   border-radius: 5px;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.team-image {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: cover;
+   border-radius: 50px;
+}
+
+.title-unique {
+   text-align: center;
+   font-size: 30px;
+   font-weight: 600;
+   margin: 10px 0;
+}
+
+.view-details-unique {
+   padding: 10px;
+   width: 100%;
+   display: block;
+   text-align: center;
+   background: #333EFF20;
+   box-sizing: border-box;
+   border-radius: 4px;
+   color: #333eFF;
+   text-decoration: none;
+   font-size: 15px;
+   border: none;
+   cursor: pointer;
+}
+
+.selected-batch-container {
+   width: 100%;
+}
+
+.selected-batch-title {
+   text-align: center;
+   font-size: 34px;
+}

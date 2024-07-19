@@ -1,0 +1,17 @@
+
+.batch-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.batch-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.batch-card:hover {
+    background-color: #f0f0f0;
+}

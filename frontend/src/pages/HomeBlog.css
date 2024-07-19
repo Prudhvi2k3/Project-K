@@ -1,0 +1,421 @@
+/* General styles */
+.App {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+.ant-modal-body {
+    padding: 15px; /* Reduce from default 24px */
+  }
+  .rectangular-nav-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .rectangular-nav {
+    width: 100%;
+    overflow-x: auto;
+    margin-left: 180px;
+  }
+  
+  .rectangular-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  .rectangular-nav li {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 12px 2rem;
+    font-size: 1em;
+    white-space: nowrap;
+    list-style: none;
+    margin: 0 10px;
+    position: relative;
+    
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  
+  .rectangular-nav li::after {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    bottom: 0;
+    height: 2px;
+    background-color: #83B4FF;
+    transform: scaleX(0); /* Start with no width */
+    transition: transform 0.3s ease; /* Add transition */
+  }
+  
+  .rectangular-nav li:hover::after,
+  .rectangular-nav li:active::after,
+  .rectangular-nav li:focus::after,
+  .rectangular-nav li.active::after {
+    transform: scaleX(1);
+     /* Expand to full width */
+  }
+  
+  /* You can remove this if you don't need a specific active state */
+  .rectangular-nav li.active::after {
+    transform: scaleX(1); /* Always show for active state */
+  }
+  
+ /* Project card styles */
+.project-card {
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  .project-card::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: #20265C;
+    transition: height 0.3s ease;
+    z-index: -1;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+  
+  .project-card:hover::after {
+    height: 10px; /* Adjust this value to control the height of the color transition */
+  }
+  
+  .project-card .image-container {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 15px 15px 5px;
+    text-align: center;
+  }
+  
+  .project-card .date {
+    font-size: 0.85em;
+    color: #666;
+    margin: 0 15px 15px;
+    text-align: center;
+  }
+  
+  .project-card p {
+    font-size: 1em;
+    color: #555;
+    margin: 0 15px 15px;
+    text-align: center; /* Center align the text */
+  }
+  
+  .project-card button {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 15px auto;
+    padding: 10px;
+    background-color: #20265C;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+  }
+  
+  .project-card button:hover {
+    background-color: #2a3ab1;
+  }
+  
+  /* Newsletter table styles */
+  .newsletter-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .newsletter-table th, .newsletter-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .newsletter-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 0.9em;
+  }
+  
+  .newsletter-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .newsletter-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .newsletter-table button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    background-color: #20265C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.85em;
+  }
+  
+  .newsletter-table button:hover {
+    background-color: #3f51b5;
+  }
+  
+ /* Modal styles */
+.blog-details {
+    padding: 0;
+    max-width: 100%;
+    margin: 0 ;
+    object-fit: cover;
+    height: auto;
+  }
+  
+  .blog-details h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.5em;
+  }
+  
+  .blog-details h3 {
+    margin-bottom: 20px;
+    color: #666;
+    font-weight: normal;
+    font-size: 1em;
+  }
+  
+  .blog-details p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 0.9em;
+  }
+  .blog-image {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+  .blog-images-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .preview-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .preview-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .blog-details button {
+    padding: 8px 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #20265C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .blog-details button:hover {
+    background-color: #3f51b5;
+  }
+  
+  /* Responsive design */
+  @media (min-width: 1024px) {
+    .project-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  @media (max-width: 1048px) {
+    .App {
+      padding: 10px;
+    }
+    
+    .project-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .project-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) and (max-width: 767px) and (min-width : 481px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .rectangular-nav li {
+        padding: 10px 12px;
+        font-size: 0.9em;
+      }
+      
+    .newsletter-table th, .newsletter-table td {
+        padding: 10px;
+      }
+    
+  }
+  @media (max0width: 767px) and (min-width: 481px) {
+    .project-grid{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media (max-width: 480px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+    .rectangular-nav li {
+        padding: 8px 10px;
+        font-size: 0.8em;
+      }
+      
+    .newsletter-table button {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+      }
+  }
+  @media (max-width: 768px) {
+    .rectangular-nav-container {
+      justify-content: flex-start;
+    }
+  
+    .rectangular-nav {
+      width: 100%;
+      overflow-x: auto;
+    }
+  
+    .rectangular-nav ul {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      padding-bottom: 5px;
+    }
+  
+    .rectangular-nav li {
+      flex: 0 0 auto;
+      padding: 10px 15px;
+      font-size: 0.9em;
+      margin : 0 5px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .rectangular-nav li {
+      padding: 8px 12px;
+      font-size: 0.8em;
+    }
+
+    .rectangular-nav{
+      margin-left: 0px;
+    }
+  }
+  @media (max-width: 768px) {
+    .rectangular-nav li {
+      padding: 10px 0;
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rectangular-nav li {
+      padding: 8px 0;
+      font-size: 0.8em;
+    }
+  }
+  @media (max-width: 320px) {
+    .rectangular-nav li {
+      padding: 5px 2px;
+      font-size: 0.6em;
+    }
+    .rectangular-nav ul {
+      justify-content: space-between;
+    }
+    .project-card h3 {
+      font-size: 1em;
+    }
+    
+    .project-card .date, .project-card p {
+      font-size: 0.8em;
+    }
+  }
+  @media (max-width: 380px) {
+    .rectangular-nav li {
+      padding: 6px 4px;
+      font-size: 0.55em;
+    }
+    
+    .newsletter-table {
+      font-size: 0.8em;
+    }
+    
+    .newsletter-table th, .newsletter-table td {
+      padding: 8px 5px;
+    }
+    
+    .newsletter-table button {
+      padding: 6px 8px;
+      font-size: 0.8em;
+    }
+  }

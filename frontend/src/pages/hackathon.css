@@ -1,0 +1,121 @@
+/* hackathon.css */
+.hackathon-section {
+  padding: 25px 20px;
+}
+
+.hackathon-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #20265C;
+}
+
+.hackathon-carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.hackathon-carousel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.hackathon-carousel-item {
+  width: 100%;
+  aspect-ratio: 1 / 1.2;
+  display: flex;
+}
+
+.hackathon-arrow {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 20%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.hackathon-arrow:hover {
+  background: #20265C;
+}
+
+.hackathon-arrow-left {
+  left: 10px;
+}
+
+.hackathon-arrow-right {
+  right: 10px;
+}
+
+@media (max-width: 1200px) {
+  .hackathon-carousel {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .hackathon-carousel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hackathon-section {
+    padding: 30px 15px;
+  }
+
+  .hackathon-heading {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+  }
+
+  .hackathon-carousel-container {
+    padding: 0 40px;
+  }
+
+  .hackathon-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .hackathon-arrow {
+    padding: 10px;
+    font-size: 1.25rem;
+  }
+
+  .hackathon-arrow-left {
+    left: 5px;
+  }
+
+  .hackathon-arrow-right {
+    right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hackathon-section {
+    padding: 20px 10px;
+  }
+
+  .hackathon-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .hackathon-carousel-container {
+    padding: 0 30px;
+  }
+
+  .hackathon-arrow {
+    padding: 8px;
+    font-size: 1rem;
+  }
+}
