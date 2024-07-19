@@ -27,7 +27,7 @@ app.use(session({
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? 'https://your-production-domain.com' : 'http://localhost:3000',
+  origin: process.env.NODE_ENV === 'production' ? 'https://project-k-hub.onrender.com' : 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD'],
   credentials: true,
 }));
