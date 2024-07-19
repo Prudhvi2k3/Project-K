@@ -14,7 +14,7 @@ const TeamDetails = () => {
 
   const fetchTeams = useCallback(async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/teams/${batchName}`);
+      const response = await axios.get(`https://project-k-s2nr.onrender.com/teams/${batchName}`);
       setTeams(response.data);
     } catch (error) {
       console.error('Error fetching team data:', error);
@@ -45,7 +45,7 @@ const TeamDetails = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/teams/${batchName}/${id}`);
+      await axios.delete(`https://project-k-s2nr.onrender.com/teams/${batchName}/${id}`);
       fetchTeams();
     } catch (error) {
       console.error('Error deleting team data:', error);
@@ -69,7 +69,7 @@ const TeamDetails = () => {
       form.append(key, data[key]);
     }
     try {
-      await axios.put(`http://localhost:5000/teams/${batchName}/${_id}`, form, {
+      await axios.put(`https://project-k-s2nr.onrender.com/teams/${batchName}/${_id}`, form, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
