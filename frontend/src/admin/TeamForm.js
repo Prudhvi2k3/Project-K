@@ -53,7 +53,7 @@ const TeamList = () => {
     const fetchTeams = useCallback(async () => {
         if (!activeBatch) return;
         try {
-            const response = await axios.get(`http://localhost:5000/teams/${activeBatch}`);
+            const response = await axios.get(`https://project-k-s2nr.onrender.com/teams/${activeBatch}`);
             setTeams(response.data);
         } catch (error) {
             console.error('Error fetching team data:', error);
@@ -83,7 +83,7 @@ const TeamList = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/teams/${activeBatch}/${id}`);
+            await axios.delete(`https://project-k-s2nr.onrender.com/teams/${activeBatch}/${id}`);
             fetchTeams();
             message.success('Team member deleted successfully');
         } catch (error) {
@@ -108,12 +108,12 @@ const TeamList = () => {
 
         try {
             if (editingTeam) {
-                await axios.put(`http://localhost:5000/teams/${activeBatch}/${editingTeam._id}`, formData, {
+                await axios.put(`https://project-k-s2nr.onrender.com/teams/${activeBatch}/${editingTeam._id}`, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 message.success('Team member updated successfully');
             } else {
-                await axios.post(`http://localhost:5000/teams/${values.batchName}`, formData, {
+                await axios.post(`https://project-k-s2nr.onrender.com/teams/${values.batchName}`, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 message.success('Team member added successfully');
