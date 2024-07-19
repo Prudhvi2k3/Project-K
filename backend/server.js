@@ -30,6 +30,7 @@ app.use(cors({
   origin: process.env.NODE_ENV === 'production' ? 'https://project-k-hub.onrender.com' : 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD'],
   credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // MongoDB Atlas connection
