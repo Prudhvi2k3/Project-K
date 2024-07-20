@@ -61,10 +61,10 @@ function Navbar() {
             </Link>
             <Link
               to="/passedout"
-              className={activeLink === "Batches" ? "active" : ""}
-              onClick={() => handleLinkClick("Batches")}
+              className={activeLink === "Batch" ? "active" : ""}
+              onClick={() => handleLinkClick("Batch")}
             >
-              Batche's
+              Batch
             </Link>
             <Link
               to="/alumni"

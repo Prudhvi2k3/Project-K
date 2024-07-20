@@ -26,7 +26,7 @@ const Header = () => {
 
   const menuItems = [
     { key: '/admin/main', label: 'Dashboard' },
-    { key: '/admin/TeamForm', label: 'Team Form' },
+    { key: '/admin/TeamForm', label: 'Teams' },
     { key: '/admin/alumni', label: 'Alumni' },
     { key: '/admin/achievements', label: 'Achievements' },
     { key: '/admin/focus-areas', label: 'Focus Areas' },
@@ -39,8 +39,8 @@ const Header = () => {
   return (
     <>
       <AntHeader className="header" style={{ backgroundColor: '#1890ff', display: 'flex', alignItems: 'center' }}>
-        <div className="logo" style={{ color: '#fff', fontSize: '1.5em', fontWeight: 'bold', flex: 1 }}>
-          Admin Dashboard
+        <div className="logo" style={{ color: '#fff', fontSize: '1.2em', fontWeight: 'bold', flex: 1 , alignItems: 'center'}}>
+          K-Hub Admin
         </div>
         <Button
           className="menuButton"
@@ -66,7 +66,7 @@ const Header = () => {
           type="primary"
           icon={<LogoutOutlined />}
           onClick={handleLogout}
-          style={{ marginLeft: 'auto' }}
+          style={{ marginLeft: '20px' }}
         >
           Logout
         </Button>

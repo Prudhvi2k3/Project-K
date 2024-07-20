@@ -1,104 +1,94 @@
 /* signin.css */
 
-.ant-typography, .ant-typography-secondary, .ant-input, .ant-input-password, .ant-btn-primary, .ant-btn-link {
-    color: white !important;
-    border-color: white !important;
+.ant-typography, .ant-typography-secondary, .ant-input-password, .ant-btn-primary, .ant-btn-link {
+  color: white !important;
+  border-color: white !important;
+}
+
+
+.ant-btn-primary {
+  background-color: #1890ff;
+}
+
+.ant-btn-link {
+  color: #1890ff !important;
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.ant-input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.ant-form-item {
+  margin-bottom: 16px !important;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.bg-gray-100 {
+  background-color: #f0f2f5;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.space-y-6 > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .flex-col {
+    flex-direction: column;
   }
-  
-  .ant-input, .ant-input-password {
-    background-color: transparent;
+
+  .w-full {
+    width: 100%;
   }
-  
-  .ant-input-password:hover, .ant-input-password:focus {
-    color: white !important;
-    border-color: white !important;
-    background-color: transparent;
+
+  .space-y-8 > *:not(:last-child) {
+    margin-bottom: 2rem;
   }
-  
-  .ant-btn-primary {
-    background-color: #1890ff;
+
+  .max-w-md {
+    max-width: 100%;
   }
-  
-  .ant-btn-link {
-    color: #1890ff !important;
-  }
-  
-  .ant-btn-primary:hover, .ant-btn-primary:focus {
-    background-color: #40a9ff;
-    border-color: #40a9ff;
-  }
-  
-  .ant-input::placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
-  }
-  
-  .ant-form-item {
-    margin-bottom: 16px !important;
-  }
-  
-  .min-h-screen {
-    min-height: 100vh;
-  }
-  
-  .bg-gray-100 {
-    background-color: #f0f2f5;
-  }
-  
-  .bg-black {
-    background-color: #000;
-  }
-  
-  .text-white {
-    color: #fff;
-  }
-  
-  .p-8 {
-    padding: 2rem;
-  }
-  
-  .rounded-lg {
-    border-radius: 0.5rem;
-  }
-  
-  .shadow-lg {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .flex {
-    display: flex;
-  }
-  
-  .items-center {
-    align-items: center;
-  }
-  
-  .justify-center {
-    justify-content: center;
-  }
-  
-  .p-4 {
-    padding: 1rem;
-  }
-  
-  .space-y-6 > *:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-  
-  @media (max-width: 768px) {
-    .flex-col {
-      flex-direction: column;
-    }
-  
-    .w-full {
-      width: 100%;
-    }
-  
-    .space-y-8 > *:not(:last-child) {
-      margin-bottom: 2rem;
-    }
-  
-    .max-w-md {
-      max-width: 100%;
-    }
-  }
-  
+}

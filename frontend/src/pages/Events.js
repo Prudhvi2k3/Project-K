@@ -76,7 +76,7 @@ const EventCard = () => {
             <p>{/*<strong>Small Description:</strong> */}{selectedEvent.smallDescription}</p>
             <p>{/*<strong>Long Description:</strong> */}{selectedEvent.longDescription}</p>
             <p>{/*<strong>Date:</strong> */}{new Date(selectedEvent.eventDate).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })}</p>
-            <a className="more-events" href="event-gallery">More Events</a>
+            <a className="more-events" href="/event-gallery">More Events</a>
           </div>
         </div>
       )}

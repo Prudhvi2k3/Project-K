@@ -27,10 +27,10 @@ const Footer = () => {
         <h3>Our Links</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="event-gallery">Events</a></li>
-          <li><a href="ourwork">Our Work</a></li>
-          <li><a href="blogs">Blogs</a></li>
-          <li><a href="contact">Contact Us</a></li>
+          <li><a href="/event-gallery">Events</a></li>
+          <li><a href="/ourwork">Our Work</a></li>
+          <li><a href="/blogs">Blogs</a></li>
+          <li><a href="/contact">Contact Us</a></li>
         </ul>
       </div>
       <div className="footer-section contact-us">
