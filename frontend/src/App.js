@@ -5,7 +5,7 @@ import AdminRoutes from './adminroutes';
 
 function App() {
   return (
-    <Router basename="/K-Hub">
+    <Router>
       <Routes>
         <Route path="/admin/*" element={<AdminRoutes />} />
         <Route path="/*" element={<UserRoutes />} />
